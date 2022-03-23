@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width" initial-scale=1.0> 
+        <link rel="stylesheet" href="style.css">
+        <title>Wheel of fortune</title>
+    </head>
+
+    <body>
+        <div class="wheel">
+            <div id="box" class="box">
+                <div class="originalBox">
+                    <div id="slice" class="slice1">1</div>
+                    <div id="slice" class="slice2">2</div>
+                    <div id="slice" class="slice3">3</div>
+                    <div id="slice" class="slice4">4</div>
+                </div>
+                <div class="rotatedBox">
+                    <div id="slice" class="slice5">1</div>
+                    <div id="slice" class="slice6">2</div>
+                    <div id="slice" class="slice7">3</div>
+                    <div id="slice" class="slice8">4</div>
+                </div>
+            </div>
+            <button class="rotate" onclick="spin()">Spin</button>
+        </div>
+
+        <script>
+            function spin(){
+                var min = 1000;
+                var max = 10000;
+
+                var rotation = Math.floor(Math.random() * (min-max)) + max;
+
+                document.getElementById('box').style.transform = "rotate("+rotation+"deg)";
+            }
+        </script>
+    </body>
+</html>
