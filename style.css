@@ -175,20 +175,6 @@ body{
 	animation-name: none;
 }
 
-.pointerBox{
-	left:95%;	
-	top:50%;
-	width: 50px;
-	height: 60px;
-	position: absolute;
-}
-
-.pointer{
-	clip-path: polygon(0% 50%, 100% 90%, 100% 10%);
-	background-color: black;
-	color: black;
-}
-
 @-webkit-keyframes rainbow {
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
