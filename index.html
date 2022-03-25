@@ -6,37 +6,71 @@
     </head>
 
     <body>
-        <div class="wheel">
-            <div id="box" class="box">
-                <div class="originalBox">
-                    <div id="slice" class="slice1">1</div>
-                    <div id="slice" class="slice2">2</div>
-                    <div id="slice" class="slice3">3</div>
-                    <div id="slice" class="slice4">4</div>
+
+        <!-- Pc version -->
+        <div class="pc">
+            <div class="wheel">
+                <div id="pcBox" class="pcBox">
+                    <div class="originalBox">
+                        <div id="slice" class="slice1">1</div>
+                        <div id="slice" class="slice2">2</div>
+                        <div id="slice" class="slice3">3</div>
+                        <div id="slice" class="slice4">4</div>
+                    </div>
+                    <div class="rotatedBox">
+                        <div id="slice" class="slice5">1</div>
+                        <div id="slice" class="slice6">2</div>
+                        <div id="slice" class="slice7">3</div>
+                        <div id="slice" class="slice8">4</div>
+                    </div>
                 </div>
-                <div class="rotatedBox">
-                    <div id="slice" class="slice5">1</div>
-                    <div id="slice" class="slice6">2</div>
-                    <div id="slice" class="slice7">3</div>
-                    <div id="slice" class="slice8">4</div>
+                <button class="rotate" onclick="pcSpin()">Spin</button>
+                <div class="pcPointerBox">
+                    <div class="pointer">.</div>
                 </div>
             </div>
-            <button class="rotate" onclick="spin()">Spin</button>
-            <div class="pointerBox">
-                <div class="pointer">
-                    .
+        </div>
+
+        <!-- Mobile version -->
+        <div class="mobile">
+            <div class="wheel">
+                <div id="mobileBox" class="mobileBox" onclick="mobileSpin()">
+                    <div class="originalBox">
+                        <div id="slice" class="slice1">1</div>
+                        <div id="slice" class="slice2">2</div>
+                        <div id="slice" class="slice3">3</div>
+                        <div id="slice" class="slice4">4</div>
+                    </div>
+                    <div class="rotatedBox">
+                        <div id="slice" class="slice5">1</div>
+                        <div id="slice" class="slice6">2</div>
+                        <div id="slice" class="slice7">3</div>
+                        <div id="slice" class="slice8">4</div>
+                    </div>
+                </div>
+                <div class="mobilePointer">
+                    <div class="pointer">.</div>
                 </div>
             </div>
         </div>
 
         <script>
-            function spin(){
+            function pcSpin(){
                 var min = 1000;
                 var max = 10000;
 
                 var rotation = Math.floor(Math.random() * (min-max)) + max;
 
-                document.getElementById('box').style.transform = "rotate("+rotation+"deg)";
+                document.getElementById('pcBox').style.transform = "rotate("+rotation+"deg)";
+            }
+
+            function mobileSpin(){
+                var min = 1000;
+                var max = 10000;
+
+                var rotation = Math.floor(Math.random() * (min-max)) + max;
+
+                document.getElementById('mobileBox').style.transform = "rotate("+rotation+"deg)";
             }
         </script>
     </body>
