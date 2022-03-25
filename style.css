@@ -145,6 +145,40 @@ body{
 	left: 125px;
 }
 
+b{
+	width: 90px;
+	height: 90px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Times New Roman', Times, serif;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.slice1 b, .slice5 b{
+	transform: rotate(180deg);
+	left: 20%;
+	top: 20%;
+}
+
+.slice2 b, .slice6 b{
+	left: 45%;
+	top: 45%;
+}
+
+.slice3 b, .slice7 b{
+	transform: rotate(90deg);
+	left: 20%;
+	top: 45%;
+}
+
+.slice4 b, .slice8 b{
+	transform: rotate(-90deg);
+	left: 45%;
+	top: 20%;
+}
+
 .rotate{
 	position: absolute;
 	top: 51.5%;
@@ -214,6 +248,11 @@ body{
 	body {
 		background: aqua;
 	}
+
+	b{
+		font-size: 12;
+		font-weight: 600;
+	}
 	
 	.pc {
 		display: none;
@@ -233,6 +272,7 @@ body{
 		height: 50%;
 	}
 
+	/* Slice sizing */
 	.slice1{
 		top:50px;
 		left: 0;
@@ -271,6 +311,30 @@ body{
 	.slice8{
 		top:0px;
 		left: 50px;
+	}
+
+	/* Text styles */
+	.slice1 b, .slice5 b{
+		transform: rotate(180deg);
+		left: -20%;
+		top: -32.5%;
+	}
+
+	.slice2 b, .slice6 b{
+		left: 30%;
+		top: 42.5%;
+	}
+
+	.slice3 b, .slice7 b{
+		transform: rotate(90deg);
+		left: -32.5%;
+		top: 30%;
+	}
+
+	.slice4 b, .slice8 b{
+		transform: rotate(-90deg);
+		left: 42.5%;
+		top: -20%;
 	}
 
   }
