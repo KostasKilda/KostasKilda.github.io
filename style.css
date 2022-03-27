@@ -1,7 +1,6 @@
 body{
 	margin:0;
 	padding:0;
-	background-color: #34495e;
 	display:flex;
 	align-items:center;
 	justify-content: center;
@@ -244,11 +243,7 @@ b{
 	}
 }
 
-@media only screen and (max-width: 590px) {
-	body {
-		background: aqua;
-	}
-
+@media only screen and (max-width: 590px), (max-height: 580px) {
 	b{
 		font-size: 12;
 		font-weight: 600;
